@@ -1,6 +1,38 @@
 const Joi = require('joi');
 
 module.exports = {
+  createPower: {
+    body: {
+      name: Joi.string().required(),
+      description: Joi.string().required()
+    }
+  },
+  updatePower: {
+    body: {
+      name: Joi.string().required(),
+      description: Joi.string().required()
+    },
+    params: {
+      powerId: Joi.string().hex().required()
+    }
+  },
+  createContact: {
+    body: {
+      name: Joi.string().required(),
+      lastName: Joi.string().required(),
+      email: Joi.string().required()
+    }
+  },
+  updateContact: {
+    body: {
+      name: Joi.string().required(),
+      lastName: Joi.string().required(),
+      email: Joi.string().required
+    },
+    params: {
+      contactId: Joi.string().hex().required()
+    }
+  },
   // POST /api/users
   createUser: {
     body: {

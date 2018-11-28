@@ -19,7 +19,7 @@ const envVarsSchema = Joi.object({
   JWT_SECRET: Joi.string().required()
     .description('JWT Secret required to sign'),
   MONGO_HOST: Joi.string().required()
-    .description('Mongo DB host url'),
+    .description('mongodb://admin:curso123!@ds113134.mlab.com:13134/contacts-curso'),
   MONGO_PORT: Joi.number()
     .default(27017)
 }).unknown()
